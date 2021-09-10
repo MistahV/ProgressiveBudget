@@ -1,4 +1,3 @@
-require("dotenv").config();
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
@@ -15,7 +14,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
+mongoose.connect("mongodb+srv://chrisvanetten:passwordtest4321@cluster0.la1b9.mongodb.net/budget?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
